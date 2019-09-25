@@ -32,6 +32,8 @@ class MoviesLocalDataSourceTest {
             .build()
     )
 
+    private val moviesPage = MoviesPage(movies)
+
     private lateinit var dataSource: MoviesLocalDataSource
 
     @Before
@@ -42,12 +44,12 @@ class MoviesLocalDataSourceTest {
     @Test
     fun testReadFileContentAndParse() {
         whenever(fileReader.readFile(fileName)) doReturn content
-        whenever(jsonParser.parse<List<Movie>>(content)) doReturn movies
+        whenever(jsonParser.parse(content, MoviesPage::class.java)) doReturn moviesPage
 
         val result = dataSource.loadMovies().blockingGet()
 
         verify(fileReader).readFile(fileName)
-        verify(jsonParser).parse<List<Movie>>(content)
+        verify(jsonParser).parse(content, MoviesPage::class.java)
 
         assertEquals(movies, result)
     }
@@ -71,7 +73,7 @@ class MoviesLocalDataSourceTest {
 
         val message = "Parsing error"
         val throwable = JsonParseException(message)
-        whenever(jsonParser.parse<List<Movie>>(content)) doThrow throwable
+        whenever(jsonParser.parse(content, MoviesPage::class.java)) doThrow throwable
 
         val testObserver = dataSource.loadMovies().test()
 

@@ -4,5 +4,5 @@ import com.bigo.data.parsers.excpetions.JsonParseException
 
 interface JsonParser {
     @Throws(JsonParseException::class)
-    fun <T> parse(json: String): T
+    fun <T> parse(json: String, clazz: Class<T>): T?
 }

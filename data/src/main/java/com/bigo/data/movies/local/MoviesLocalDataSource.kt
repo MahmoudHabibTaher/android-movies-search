@@ -16,7 +16,8 @@ class MoviesLocalDataSource(
         Single.create { emitter ->
             try {
                 val content = fileReader.readFile("movies.json")
-                val movies = jsonParser.parse<List<Movie>>(content)
+                val page = jsonParser.parse(content, MoviesPage::class.java)
+                val movies = page?.movies ?: listOf()
                 emitter.onSuccess(movies)
             } catch (ex: Exception) {
                 emitter.onError(LoadMoviesException(ex.message, ex))
