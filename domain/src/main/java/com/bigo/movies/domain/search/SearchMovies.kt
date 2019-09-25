@@ -1,11 +1,11 @@
-package com.bigo.moviessearch.domain.search
+package com.bigo.movies.domain.search
 
-import com.bigo.moviessearch.domain.core.executors.PostThreadExecutor
-import com.bigo.moviessearch.domain.core.executors.ThreadExecutor
-import com.bigo.moviessearch.domain.core.usecase.UseCase
-import com.bigo.moviessearch.domain.entities.Movie
-import com.bigo.moviessearch.domain.entities.SearchResult
-import io.reactivex.rxjava3.core.Single
+import com.bigo.movies.domain.core.executors.PostThreadExecutor
+import com.bigo.movies.domain.core.executors.ThreadExecutor
+import com.bigo.movies.domain.core.usecase.UseCase
+import com.bigo.movies.domain.entities.Movie
+import com.bigo.movies.domain.entities.SearchResult
+import io.reactivex.Single
 
 class SearchMovies(
     threadExecutor: ThreadExecutor,
@@ -25,7 +25,7 @@ class SearchMovies(
             }
         } ?: emptyResult()
 
-    private fun emptyResult(): Single<List<SearchResult>> = Single.just(emptyList<SearchResult>())
+    private fun emptyResult(): Single<List<SearchResult>> = Single.just(emptyList())
 
     private fun filterMoviesByQuery(query: String, movies: List<Movie>) =
         movies.filter { movie -> movie.title.contains(query, true) }

@@ -1,9 +1,9 @@
 package com.bigo.data.movies
 
-import com.bigo.moviessearch.domain.entities.Movie
-import com.bigo.moviessearch.domain.search.MoviesDataSource
+import com.bigo.movies.domain.entities.Movie
+import com.bigo.movies.domain.search.MoviesDataSource
 import com.nhaarman.mockitokotlin2.*
-import io.reactivex.rxjava3.core.Single
+import io.reactivex.Single
 import org.junit.Before
 import org.junit.Test
 

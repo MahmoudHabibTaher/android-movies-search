@@ -1,14 +1,13 @@
-package com.bigo.moviessearch.domain.search
+package com.bigo.movies.domain.search
 
-import com.bigo.moviessearch.domain.core.executors.TestPostThreadExecutor
-import com.bigo.moviessearch.domain.core.executors.TestThreadExecutor
-import com.bigo.moviessearch.domain.entities.Movie
-import com.bigo.moviessearch.domain.entities.SearchResult
+import com.bigo.movies.domain.core.executors.TestPostThreadExecutor
+import com.bigo.movies.domain.core.executors.TestThreadExecutor
+import com.bigo.movies.domain.entities.Movie
+import com.bigo.movies.domain.entities.SearchResult
 import com.nhaarman.mockitokotlin2.doReturn
 import com.nhaarman.mockitokotlin2.mock
-import com.nhaarman.mockitokotlin2.verify
 import com.nhaarman.mockitokotlin2.whenever
-import io.reactivex.rxjava3.core.Single
+import io.reactivex.Single
 import org.junit.Before
 
 import org.junit.Assert.*

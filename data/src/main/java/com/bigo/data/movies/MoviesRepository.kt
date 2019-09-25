@@ -1,8 +1,8 @@
 package com.bigo.data.movies
 
-import com.bigo.moviessearch.domain.entities.Movie
-import com.bigo.moviessearch.domain.search.MoviesDataSource
-import io.reactivex.rxjava3.core.Single
+import com.bigo.movies.domain.entities.Movie
+import com.bigo.movies.domain.search.MoviesDataSource
+import io.reactivex.Single
 
 class MoviesRepository(private val localDataSource: MoviesDataSource) : MoviesDataSource {
     private val movies = mutableListOf<Movie>()

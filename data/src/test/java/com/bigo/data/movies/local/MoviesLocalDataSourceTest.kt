@@ -4,15 +4,14 @@ import com.bigo.data.file.FileReader
 import com.bigo.data.movies.exceptions.LoadMoviesException
 import com.bigo.data.parsers.JsonParser
 import com.bigo.data.parsers.excpetions.JsonParseException
-import com.bigo.moviessearch.domain.entities.Actor
-import com.bigo.moviessearch.domain.entities.Genre
-import com.bigo.moviessearch.domain.entities.Movie
+import com.bigo.movies.domain.entities.Actor
+import com.bigo.movies.domain.entities.Genre
+import com.bigo.movies.domain.entities.Movie
 import com.nhaarman.mockitokotlin2.*
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
 import java.io.FileNotFoundException
-import java.io.IOException
 
 class MoviesLocalDataSourceTest {
 

@@ -3,9 +3,9 @@ package com.bigo.data.movies.local
 import com.bigo.data.file.FileReader
 import com.bigo.data.movies.exceptions.LoadMoviesException
 import com.bigo.data.parsers.JsonParser
-import com.bigo.moviessearch.domain.entities.Movie
-import com.bigo.moviessearch.domain.search.MoviesDataSource
-import io.reactivex.rxjava3.core.Single
+import com.bigo.movies.domain.entities.Movie
+import com.bigo.movies.domain.search.MoviesDataSource
+import io.reactivex.Single
 import java.lang.Exception
 
 class MoviesLocalDataSource(

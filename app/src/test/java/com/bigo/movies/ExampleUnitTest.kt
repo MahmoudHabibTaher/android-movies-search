@@ -1,4 +1,4 @@
-package com.bigo.moviessearch
+package com.bigo.movies
 
 import org.junit.Test
 

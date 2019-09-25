@@ -1,8 +1,27 @@
 ext.kotlin_version = "1.3.50"
 ext.kotlin_std_lib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-ext.rx_java_version = "3.0.0-RC2"
-ext.rx_java = "io.reactivex.rxjava3:rxjava:$rx_java_version"
-
 ext.gson_version = "2.8.5"
 ext.gson = "com.google.code.gson:gson:$gson_version"
+
+ext.lifecycle_version = "2.1.0"
+
+ext.androidx_version = "1.1.0"
+ext.androidx_core = "androidx.core:core-ktx:$androidx_version"
+ext.androidx_appcompat = "androidx.appcompat:appcompat:$androidx_version"
+
+ext.constraint_layout_version = "1.1.3"
+ext.constraint_layout = "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
+
+ext.android_lifecycle = "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+ext.android_lifecycle_compiler = "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+
+ext.koin_version = "2.0.1"
+ext.koin = "org.koin:koin-android:$koin_version"
+ext.koin_view_model = "org.koin:koin-androidx-viewmodel:$koin_version"
+
+ext.rx_java_version = "2.2.12"
+ext.rx_android_version = "2.1.1"
+
+ext.rx_java = "io.reactivex.rxjava2:rxjava:$rx_java_version"
+ext.rx_android = "io.reactivex.rxjava2:rxandroid:$rx_android_version"

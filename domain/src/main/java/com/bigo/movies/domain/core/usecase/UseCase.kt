@@ -1,7 +1,7 @@
-package com.bigo.moviessearch.domain.core.usecase
+package com.bigo.movies.domain.core.usecase
 
-import com.bigo.moviessearch.domain.core.executors.PostThreadExecutor
-import com.bigo.moviessearch.domain.core.executors.ThreadExecutor
+import com.bigo.movies.domain.core.executors.PostThreadExecutor
+import com.bigo.movies.domain.core.executors.ThreadExecutor
 import io.reactivex.rxjava3.core.Single
 
 abstract class UseCase<T, V>(

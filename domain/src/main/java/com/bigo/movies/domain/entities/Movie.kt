@@ -1,4 +1,4 @@
-package com.bigo.moviessearch.domain.entities
+package com.bigo.movies.domain.entities
 
 data class Movie(
     val title: String,
