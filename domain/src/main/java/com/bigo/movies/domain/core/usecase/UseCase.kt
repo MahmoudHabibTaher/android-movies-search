@@ -2,7 +2,7 @@ package com.bigo.movies.domain.core.usecase
 
 import com.bigo.movies.domain.core.executors.PostThreadExecutor
 import com.bigo.movies.domain.core.executors.ThreadExecutor
-import io.reactivex.rxjava3.core.Single
+import io.reactivex.Single
 
 abstract class UseCase<T, V>(
     private val threadExecutor: ThreadExecutor,

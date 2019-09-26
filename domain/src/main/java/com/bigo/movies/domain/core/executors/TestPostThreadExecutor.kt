@@ -1,7 +1,8 @@
 package com.bigo.movies.domain.core.executors
 
-import io.reactivex.rxjava3.core.Scheduler
-import io.reactivex.rxjava3.schedulers.Schedulers
+import io.reactivex.Scheduler
+import io.reactivex.schedulers.Schedulers
+
 
 class TestPostThreadExecutor : PostThreadExecutor {
     override fun scheduler(): Scheduler = Schedulers.single()

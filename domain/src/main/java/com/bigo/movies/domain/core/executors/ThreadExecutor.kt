@@ -1,6 +1,6 @@
 package com.bigo.movies.domain.core.executors
 
-import io.reactivex.rxjava3.core.Scheduler
+import io.reactivex.Scheduler
 
 interface ThreadExecutor {
     fun scheduler(): Scheduler

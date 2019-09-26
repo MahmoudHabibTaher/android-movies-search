@@ -1,5 +1,5 @@
 package com.bigo.movies.di
 
 val appModules = listOf(
-    domainCoreModule, moviesDomainModule
+    domainCoreModule, moviesDomainModule, moviesDataModule
 )
