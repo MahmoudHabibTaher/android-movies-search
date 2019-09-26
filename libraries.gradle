@@ -25,3 +25,5 @@ ext.rx_android_version = "2.1.1"
 
 ext.rx_java = "io.reactivex.rxjava2:rxjava:$rx_java_version"
 ext.rx_android = "io.reactivex.rxjava2:rxandroid:$rx_android_version"
+
+ext.nav_version = "2.1.0"

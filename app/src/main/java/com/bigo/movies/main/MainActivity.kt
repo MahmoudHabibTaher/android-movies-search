@@ -1,7 +1,8 @@
-package com.bigo.movies
+package com.bigo.movies.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.bigo.movies.R
 
 class MainActivity : AppCompatActivity() {
 

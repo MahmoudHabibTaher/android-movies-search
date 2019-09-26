@@ -42,6 +42,9 @@ dependencies {
     implementation "$rx_java"
     implementation "$rx_android"
 
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
     implementation project(':domain')
     implementation project(':data')
 
