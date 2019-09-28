@@ -30,9 +30,15 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "$kotlin_std_lib"
     api "$gson"
+    api "$retrofit"
+    api "$retrofit_rxjava2"
+    api "$retrofit_gson"
+    api "$okhttp_logging_interceptor"
+
     implementation project(':domain')
+
     testImplementation 'junit:junit:4.12'
     testImplementation 'org.mockito:mockito-core:2.28.2'
     testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0"

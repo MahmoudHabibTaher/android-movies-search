@@ -1,5 +1,6 @@
 package com.bigo.movies.domain.search
 
+import com.bigo.movies.domain.MoviesDataSource
 import com.bigo.movies.domain.core.executors.TestPostThreadExecutor
 import com.bigo.movies.domain.core.executors.TestThreadExecutor
 import com.bigo.movies.domain.entities.Movie

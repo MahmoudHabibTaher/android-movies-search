@@ -1,7 +1,7 @@
 package com.bigo.data.movies
 
 import com.bigo.movies.domain.entities.Movie
-import com.bigo.movies.domain.search.MoviesDataSource
+import com.bigo.movies.domain.MoviesDataSource
 import com.nhaarman.mockitokotlin2.*
 import io.reactivex.Single
 import org.junit.Before
@@ -12,6 +12,7 @@ import org.junit.Assert.*
 class MoviesRepositoryTest {
 
     private val localDataSource = mock<MoviesDataSource>()
+    private val remoteDataSource = mock<MoviesDataSource>()
 
     private lateinit var moviesRepository: MoviesRepository
 
@@ -19,7 +20,7 @@ class MoviesRepositoryTest {
     fun setUp() {
         clearInvocations(localDataSource)
 
-        moviesRepository = MoviesRepository(localDataSource)
+        moviesRepository = MoviesRepository(localDataSource, remoteDataSource)
     }
 
     @Test

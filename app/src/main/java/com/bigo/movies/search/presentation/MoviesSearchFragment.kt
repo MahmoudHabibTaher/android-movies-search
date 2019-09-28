@@ -5,11 +5,14 @@ import android.view.View
 import androidx.core.widget.doOnTextChanged
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import com.bigo.movies.R
 import com.bigo.movies.core.presentation.BaseFragment
 import com.bigo.movies.core.presentation.verticalDivider
 import com.bigo.movies.core.presentation.verticalLayoutManager
+import com.bigo.movies.domain.entities.Movie
 import com.bigo.movies.domain.entities.SearchResult
+import com.bigo.movies.entities.MovieParcelable
 import kotlinx.android.synthetic.main.fragment_movies_search.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -20,7 +23,9 @@ class MoviesSearchFragment : BaseFragment() {
         showSearchResults(it)
     }
 
-    private val resultsAdapter = MoviesSearchResultAdapter()
+    private val resultsAdapter = MoviesSearchResultAdapter(onMovieSelected = {
+        onMovieSelected(it)
+    })
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,5 +60,10 @@ class MoviesSearchFragment : BaseFragment() {
 
     private fun showSearchResults(results: List<SearchResult>) {
         resultsAdapter.setNewData(results)
+    }
+
+    private fun onMovieSelected(movie: Movie) {
+        val action = MoviesSearchFragmentDirections.showMovieDetails(MovieParcelable.fromMovie(movie))
+        findNavController().navigate(action)
     }
 }

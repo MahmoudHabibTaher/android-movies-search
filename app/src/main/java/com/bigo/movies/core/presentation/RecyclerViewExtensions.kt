@@ -2,11 +2,16 @@ package com.bigo.movies.core.presentation
 
 import androidx.annotation.DimenRes
 import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 fun RecyclerView.verticalLayoutManager() {
     layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+}
+
+fun RecyclerView.gridLayoutManager(spanCount: Int) {
+    layoutManager = GridLayoutManager(context, spanCount)
 }
 
 fun RecyclerView.verticalDivider(@DimenRes dimenRes: Int? = null) = this.run {

@@ -8,7 +8,9 @@ import com.bigo.data.parsers.JsonParser
 import com.bigo.movies.domain.core.mappers.ModelMapper
 import com.bigo.movies.domain.core.mappers.mapWith
 import com.bigo.movies.domain.entities.Movie
-import com.bigo.movies.domain.search.MoviesDataSource
+import com.bigo.movies.domain.MoviesDataSource
+import com.bigo.movies.domain.entities.MovieImage
+import com.bigo.movies.domain.entities.PagedList
 import io.reactivex.Single
 import java.lang.Exception
 
@@ -28,4 +30,8 @@ class MoviesLocalDataSource(
                 emitter.onError(LoadMoviesException(ex.message, ex))
             }
         }
+
+    override fun loadMovieImages(title: String, page: Int): Single<PagedList<MovieImage>> {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
 }

@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">MoviesSearch</string>
     <string name="search">Search</string>
-    <string name="search_movies">Search Movies</string>
+    <string name="search_movies_label">Search</string>
+    <string name="cast">Cast</string>
+    <string name="genres">Genres</string>
+    <string name="year">Year</string>
+    <string name="rating">Rating</string>
+    <string name="movie_details_label">Details</string>
 </resources>

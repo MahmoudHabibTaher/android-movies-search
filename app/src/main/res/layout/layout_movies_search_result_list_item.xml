@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toBottomOf="@+id/year_text_view"
+        tools:itemCount="5"
         tools:listitem="@layout/layout_movies_list_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
