@@ -16,12 +16,15 @@ class MoviesSearchViewModel(
     val searchResultsLiveData = MutableLiveData<List<SearchResult>>()
 
     fun searchMovies(query: String) {
+        notifyLoadingVisible(true)
         val params = SearchMoviesParams(query)
         val single = searchMovies.execute(params)
         execute(single, onSuccess = {
             notifySearchResults(it)
+            notifyLoadingVisible(false)
         }, onError = {
             logError("Error searching movies", it)
+            notifyLoadingVisible(false)
         })
     }
 

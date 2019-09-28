@@ -7,6 +7,7 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import com.bigo.movies.R
 import com.bigo.movies.core.presentation.BaseFragment
+import com.bigo.movies.core.presentation.verticalDivider
 import com.bigo.movies.core.presentation.verticalLayoutManager
 import com.bigo.movies.domain.entities.SearchResult
 import kotlinx.android.synthetic.main.fragment_movies_search.*
@@ -40,7 +41,12 @@ class MoviesSearchFragment : BaseFragment() {
         search_results_recycler_view.apply {
             verticalLayoutManager()
             adapter = resultsAdapter
+            verticalDivider()
         }
+    }
+
+    override fun setLoadingVisible(visible: Boolean) {
+        loading_indicator_view.visibility = if (visible) View.VISIBLE else View.GONE
     }
 
     private fun observeSearchResults(viewModel: MoviesSearchViewModel, owner: LifecycleOwner) {

@@ -21,7 +21,7 @@ abstract class BaseViewModel(application: Application) : AndroidViewModel(applic
         disposables.add(disposable)
     }
 
-    protected fun notfiyLoadingVisible(visible: Boolean) {
+    protected fun notifyLoadingVisible(visible: Boolean) {
         loadingVisibleLiveData.postValue(visible)
     }
 
