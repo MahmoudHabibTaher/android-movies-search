@@ -34,8 +34,13 @@ class SearchMovies(
         movies.groupBy { movie ->
             movie.year
         }.map { (year, movies) ->
-            buildResult(year, movies)
+            buildResult(year, filterTopRatedMovies(movies))
         }
+
+    private fun filterTopRatedMovies(movies: List<Movie>) =
+        movies.sortedByDescending {
+            it.rating
+        }.take(5).sortedBy { it.title }
 
     private fun buildResult(year: Int, movies: List<Movie>) =
         SearchResult.Builder()

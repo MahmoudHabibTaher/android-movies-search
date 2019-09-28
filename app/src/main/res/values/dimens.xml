@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="two_lines_list_height">64dp</dimen>
+    <dimen name="divider_inset">16dp</dimen>
+</resources>
